@@ -1,0 +1,77 @@
+*{
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    perspective: 600px;
+    display:flex;
+    justify-content:center;
+    background:#eec;
+}
+    .containner{
+        width:800px;
+        height:680px;
+        padding:0px;
+        display:flex;
+        left:300px;
+        top:20px;
+        background:#eee;
+        justify-content:center;
+        border:1px #bbb solid;
+        box-shadow:0 0px 10px #333;
+        overflow: hidden;
+    }
+    .cleft{
+       position: absolute;
+       left:20px;
+       bottom:30px;
+    }
+    .calendar table{
+        border-collapse:collapse;
+        margin:5px;
+        background:#eee;
+        border-radius:1%;
+    }
+    .calendar td{
+        padding:5px;
+        text-align:center;
+        height:70px;
+        width:160px;
+    }
+    .calendar .tyear{
+        font-size:2rem;
+    }
+    .pass{
+        color:#ccc;
+    }
+    .calendar tr:nth-child(2),tr:nth-child(1){
+        background:#77a;
+        color:#fff;
+        font-size:2.5rem;
+    }
+    .calendar tr:nth-child(n+3) td{
+        font-size:1.5rem;
+    }
+    .calendar tr:nth-child(n+4) td:hover{
+        box-shadow:inset 0px 0px 5px #333;
+        cursor:pointer;
+    }
+    .calendar tr:nth-child(n+4) td:active{
+        border:1px solid #03a;
+    }
+    a{
+        box-sizing:border-box;
+        margin:0px;
+        padding:5px;
+        display:inline-block;
+        width:100%;
+        background:transparent;
+        box-shadow:0 0 8px 5px transparent;
+        color:#aea;
+        border-radius:10%;
+        transform:.5s;
+    }
+    a:hover{
+        box-shadow: 0 0 15px #ddd;
+    }
