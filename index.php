@@ -127,7 +127,6 @@
         
         <script>
             function sub(){
-                val = document.querySelector('select').value;
                 document.querySelector('form').submit();
             }
         </script>

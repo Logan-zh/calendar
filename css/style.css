@@ -81,6 +81,7 @@ select{
     font-size:1.8rem;
     background:transparent;
     color:whitesmoke;
+    border:none;
 }
 option{
     font-size:1.5rem;
