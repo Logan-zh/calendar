@@ -46,7 +46,15 @@
                                     <td colspan="1">
                                     <a href="index.php?year=<?=$year-1?>&mon=<?=$q?>"><i class="fas fa-arrow-left"></i></a>
                                     </td>
-                                    <td colspan="5" class="tyear"><?=$year?>年</td>
+                                    <td colspan="5" class="tyear">
+                                    <form action="index.php" method='GET'>
+                                    <select name="year">
+                                    <?php for($i=$year;$i<$year+50;$i++){ ?>
+                                        <option value="<?=$i?>"><?=$i?></option>
+                                    <?php } ?>
+                                    </select>年<input type="hidden" name='mon'value='<?=$q?>'><input type="submit"value='查詢'><a href="index.php">正確日期</a>
+                                    </form>
+                                    </td>
                                     <td colspan="1">
                                     <a href="index.php?year=<?=$year+1?>&mon=<?=$q?>"><i class="fas fa-arrow-right"></i></a>
                                     </td>
@@ -107,8 +115,7 @@
                             }
                             echo "</tr>";
                         }
-                        
-                    ?>          
+                    ?>         
                 </table>
             </div>
 
