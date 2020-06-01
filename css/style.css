@@ -48,7 +48,7 @@ body{
     .calendar tr:nth-child(2),tr:nth-child(1){
         background:#77a;
         color:#fff;
-        font-size:2.5rem;
+        font-size:2rem;
     }
     .calendar tr:nth-child(n+3) td{
         font-size:1.5rem;
@@ -75,3 +75,14 @@ body{
     a:hover{
         box-shadow: 0 0 15px #ddd;
     }
+select{
+    width:90px;
+    height:50px;
+    font-size:1.8rem;
+    background:transparent;
+    color:whitesmoke;
+}
+option{
+    font-size:1.5rem;
+    background:#77a;
+}

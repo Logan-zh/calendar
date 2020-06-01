@@ -38,7 +38,7 @@
             $preD = date('t',strtotime('-1 month'.$firstDay));
             $between = $firstDayWeek-1;
         ?>
-                <div class="cleft">現在:<?=date('Y-m-d')?>、<?=date('H')?>點<?=date('i')?>分</div>
+                <div id="outside" class="cleft">現在:<?=date('Y-m-d')?>、<?=date('H')?>點<?=date('i')?>分</div>
                     <div class="containner">
                         <div class="calendar">
                             <table>
@@ -48,11 +48,15 @@
                                     </td>
                                     <td colspan="5" class="tyear">
                                     <form action="index.php" method='GET'>
-                                    <select name="year">
-                                    <?php for($i=$year;$i<$year+50;$i++){ ?>
+                                    <select name="year" onchange="sub()">
+                                    <?php for($i=$year-10;$i<$year;$i++){ ?>
                                         <option value="<?=$i?>"><?=$i?></option>
                                     <?php } ?>
-                                    </select>年<input type="hidden" name='mon'value='<?=$q?>'><input type="submit"value='查詢'><a href="index.php">正確日期</a>
+                                    <option value="<?=$year?>" selected='selected'><?=$year?></option>
+                                    <?php for($i=$year;$i<$year+10;$i++){ ?>
+                                        <option value="<?=$i?>"><?=$i?></option>
+                                    <?php } ?>
+                                    </select>年<input type="hidden" name='mon'value='<?=$q?>'>
                                     </form>
                                     </td>
                                     <td colspan="1">
@@ -120,5 +124,12 @@
             </div>
 
         </div>
+        
+        <script>
+            function sub(){
+                val = document.querySelector('select').value;
+                document.querySelector('form').submit();
+            }
+        </script>
     </body>
 </html>
